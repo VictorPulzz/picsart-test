@@ -1,0 +1,26 @@
+{
+  "extends": ["@appello/eslint-config"],
+  "rules": {
+    "import/no-default-export": "off",
+    "import/no-named-as-default": "off",
+    "jsx-a11y/interactive-supports-focus": "off",
+    "jsx-a11y/click-events-have-key-events":  "off",
+    "@typescript-eslint/explicit-module-boundary-types":  "off",
+    "@typescript-eslint/explicit-function-return-type":  "off",
+    "react/button-has-type":  "off",
+    "no-nested-ternary":  "off",
+    "react/jsx-no-useless-fragment": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/no-unstable-nested-components":  "off",
+    "@typescript-eslint/naming-convention": "off",
+    "react/destructuring-assignment": "off",
+    "no-empty": "off",
+    "no-console": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": [""]
+      }
+    ]
+  }
+}

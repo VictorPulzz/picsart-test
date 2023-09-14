@@ -1,0 +1,7 @@
+.container {
+  @apply flex flex-row items-stretch w-full;
+}
+
+.inner {
+  @apply flex-1 max-h-screen overflow-hidden flex flex-col dark:bg-gray;
+}

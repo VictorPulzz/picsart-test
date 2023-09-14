@@ -1,0 +1,53 @@
+%default-typography {
+  @apply tracking-text;
+}
+
+.h1 {
+  @extend %default-typography;
+  @apply text-h1;
+}
+
+.h2 {
+  @extend %default-typography;
+  @apply text-h2;
+}
+
+.h3 {
+  @extend %default-typography;
+  @apply text-h3;
+}
+
+.h4 {
+  @extend %default-typography;
+  @apply text-h4;
+}
+
+.p1 {
+  @extend %default-typography;
+  @apply text-p1;
+}
+
+.p2 {
+  @extend %default-typography;
+  @apply text-p2;
+}
+
+.p3 {
+  @extend %default-typography;
+  @apply text-p3;
+}
+
+.p4 {
+  @extend %default-typography;
+  @apply text-p4;
+}
+
+.p5 {
+  @extend %default-typography;
+  @apply text-p5;
+}
+
+.p6 {
+  @extend %default-typography;
+  @apply text-p6;
+}

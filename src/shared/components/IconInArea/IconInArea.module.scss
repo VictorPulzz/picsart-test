@@ -1,0 +1,27 @@
+.block {
+  @apply min-w-[var(--size)] min-h-[var(--size)] max-w-[var(--size)] max-h-[var(--size)] rounded flex items-center justify-center;
+
+  &_default {
+    @apply border rounded border-solid;
+  }
+
+  &_circle {
+    @apply rounded-full border-none;
+  }
+
+  &_white-shadow {
+    @apply shadow-2 text-primary bg-white;
+  }
+
+  &_clickable {
+    @apply transition-all cursor-pointer;
+
+    &:hover {
+      transform: scale(0.95);
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}

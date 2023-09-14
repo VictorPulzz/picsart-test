@@ -1,0 +1,23 @@
+.skeleton {
+  @apply relative w-[var(--width)] h-[var(--height)] rounded bg-gray dark:bg-gray-dark z-10 overflow-hidden;
+
+  &_absolute {
+    @apply absolute inset-0;
+  }
+
+  &::after {
+    content: '';
+    @apply absolute inset-0 z-20 bg-white dark:bg-gray;
+
+    transform: translateX(-100%);
+    width: 50%;
+    filter: blur(25px);
+    animation: shimmer 2s ease-in-out forwards infinite;
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(200%);
+  }
+}

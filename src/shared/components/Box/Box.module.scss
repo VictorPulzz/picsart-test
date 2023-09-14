@@ -1,0 +1,55 @@
+.full {
+  @apply w-full h-screen;
+}
+
+.row {
+  @apply flex flex-row;
+
+  &_start {
+    @apply items-start;
+  }
+
+  &_center {
+    @apply justify-center items-center;
+
+    &_left {
+      @apply justify-start items-center;
+    }
+
+    &_right {
+      @apply justify-end items-center;
+    }
+
+    &_between {
+      @apply justify-between items-center;
+    }
+  }
+
+  &_stretch {
+    @apply justify-items-stretch items-stretch;
+  }
+
+  &_between {
+    @apply justify-between;
+  }
+}
+
+.col {
+  @apply flex flex-col;
+
+  &_stretch {
+    @apply justify-items-stretch items-stretch;
+  }
+
+  &_center {
+    @apply justify-center items-center;
+
+    &_left {
+      @apply justify-center items-start;
+    }
+
+    &_right {
+      @apply justify-center items-end;
+    }
+  }
+}

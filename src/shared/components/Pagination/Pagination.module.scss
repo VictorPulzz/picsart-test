@@ -1,0 +1,11 @@
+.container {
+  @apply py-2 gap-x-1.5;
+
+  &__item {
+    @apply flex items-center justify-center rounded w-8 h-8 bg-primary dark:bg-primary-dark text-white;
+
+    &_disabled {
+      @apply opacity-50;
+    }
+  }
+}

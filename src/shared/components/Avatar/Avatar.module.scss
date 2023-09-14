@@ -1,0 +1,18 @@
+.holder {
+  @apply relative
+    flex
+    items-center
+    justify-center
+    min-w-[var(--size)]
+    min-h-[var(--size)]
+    w-[var(--size)]
+    h-[var(--size)]
+    bg-gray
+    dark:bg-gray-dark
+    rounded
+    overflow-hidden;
+
+  &__image {
+    @apply w-full h-full object-cover;
+  }
+}

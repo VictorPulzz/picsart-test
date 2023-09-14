@@ -1,0 +1,42 @@
+.sidebar {
+  @apply relative
+    flex
+    flex-col
+    bg-brown
+    dark:bg-brown-dark
+    w-[250px]
+    pt-10
+    h-screen;
+
+  &-menu {
+    &__item {
+      @apply flex flex-1 items-center h-[52px] text-gray relative mb-5 pl-12 transition-colors;
+
+      &::after {
+        @apply absolute inset-0 right-20 rounded-r ease-linear;
+
+        transition: right 0.3s 0.1s, background-color 0.3s;
+        content: '';
+      }
+
+      &::before {
+        @apply left-0 top-0 bottom-0 w-0 bg-primary rounded absolute transition-all;
+
+        content: '';
+      }
+
+      &:hover,
+      &_active {
+        @apply text-primary;
+
+        &::after {
+          @apply bg-primary/10 right-8;
+        }
+
+        &::before {
+          @apply w-1;
+        }
+      }
+    }
+  }
+}

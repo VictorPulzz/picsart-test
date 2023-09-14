@@ -1,0 +1,40 @@
+%content {
+  @apply flex flex-col self-stretch;
+}
+
+.table {
+  @apply flex flex-col self-stretch flex-1 h-full w-fit min-w-full;
+
+  &__wrapper {
+    @apply flex-1 overflow-x-auto h-full w-full;
+  }
+
+  &__thead {
+    @extend %content;
+  }
+
+  &__tr {
+    @apply flex gap-2 transition-colors;
+  }
+
+  &__th {
+    @apply flex-1 min-w-[150px] flex items-center;
+  }
+
+  &__tbody {
+    @extend %content;
+    @apply overflow-y-auto overflow-x-hidden;
+
+    .table__tr {
+      &_hovered {
+        &:hover {
+          @apply bg-primary/20;
+        }
+      }
+    }
+  }
+
+  &__td {
+    @apply flex-1 flex min-w-[150px];
+  }
+}
