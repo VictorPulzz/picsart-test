@@ -8,9 +8,9 @@
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  @apply bg-amber-50;
+  background: rgb(var(--primary));
 }
 
 *::-webkit-scrollbar-track {
-  // background: #eeeeee;
+  background: #f0f0f0;
 }

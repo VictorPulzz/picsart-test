@@ -8,9 +8,9 @@ import { z } from 'zod';
 
 import { App } from '~/core/components';
 import { ThemeProvider } from '~/core/libs/Theme';
+import { store } from '~/core/store';
 import { startMockServer } from '~/mock-server/server';
 import { formErrors } from '~/shared/configs';
-import { store } from '~/store';
 
 startMockServer();
 

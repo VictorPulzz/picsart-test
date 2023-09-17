@@ -1,8 +1,9 @@
 import { UserModel } from '~/entities/User';
 
-export type PostModel = {
+export type TaskModel = {
   id: number;
   userId: UserModel['id'];
-  text: string;
+  user: Nullable<UserModel>;
+  description: string;
   createdAt: string;
 };

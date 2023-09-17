@@ -7,6 +7,7 @@ interface SkeletonProps extends HTMLAttributes<HTMLDivElement> {
   width?: string | number;
   height?: string | number;
   absolute?: boolean;
+  full?: boolean;
 }
 
 export const Skeleton: FC<SkeletonProps> = ({
@@ -15,15 +16,19 @@ export const Skeleton: FC<SkeletonProps> = ({
   height = '100%',
   style,
   absolute = false,
+  full,
   ...props
 }) => {
-  const convert = (v: Unidentifiable<string | number>): Unidentifiable<string | number> =>
-    typeof v === 'number' ? `${v}px` : v;
-
+  const convert = (v?: string | number) => (typeof v === 'number' ? `${v}px` : v);
   return (
     <div
       style={{ '--width': convert(width), '--height': convert(height), ...style } as CSSProperties}
-      className={clsx(styles.skeleton, absolute && styles.skeleton_absolute, className)}
+      className={clsx(
+        styles.skeleton,
+        absolute && styles.skeleton_absolute,
+        full && styles.skeleton_full,
+        className,
+      )}
       {...props}
     />
   );

@@ -1,6 +1,9 @@
 import { rtkQuery } from '~/core/api';
+import { tags } from '~/core/api/tags';
 
 import {
+  CreateUserRequest,
+  CreateUserResponse,
   GetAllUsersRequest,
   GetAllUsersResponse,
   GetUsersRequest,
@@ -15,13 +18,22 @@ const userApi = rtkQuery.injectEndpoints({
         url: `users`,
         params,
       }),
+      providesTags: [tags.USER_LIST],
     }),
     getUsersAll: builder.query<GetAllUsersResponse, GetAllUsersRequest>({
       query: () => ({
         url: `users/all`,
       }),
     }),
+    createUser: builder.mutation<CreateUserResponse, CreateUserRequest>({
+      query: body => ({
+        url: `users`,
+        method: 'POST',
+        body,
+      }),
+      invalidatesTags: [tags.USER_LIST],
+    }),
   }),
 });
 
-export const { useGetUsersQuery } = userApi;
+export const { useGetUsersQuery, useCreateUserMutation } = userApi;

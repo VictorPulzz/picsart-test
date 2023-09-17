@@ -1,0 +1,29 @@
+%default-btn {
+  @apply text-center text-white font-semibold rounded border border-solid border-primary transition-all px-4 flex items-center justify-center min-h-[45px];
+
+  &:not(:disabled) {
+    &:hover {
+      @apply text-white bg-primary;
+
+      box-shadow: 2px 6px 20px rgba(var(--shades-orange-50));
+    }
+
+    &:active {
+      @apply scale-95;
+
+      box-shadow: inset 4px 4px 13px rgba(0, 0, 0, 25%);
+    }
+  }
+}
+
+%default-btn-style {
+  @apply px-4 border-accent-orange border border-solid;
+}
+
+.btn {
+  @extend %default-btn;
+
+  &_primary {
+    @apply bg-primary;
+  }
+}

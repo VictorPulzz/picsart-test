@@ -8,7 +8,6 @@ export const ErrorBoundaryPage: FC = () => {
         <p className="mt-2 text-center text-p4 text-white/80">
           Refresh the page, log out or try again later.
         </p>
-
       </div>
     </div>
   );

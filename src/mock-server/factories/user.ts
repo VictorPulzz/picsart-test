@@ -5,7 +5,7 @@ import { UserModel } from '~/entities/User';
 
 export const userFactory = Factory.extend<UserModel>({
   id(i) {
-    return i;
+    return i + 1;
   },
   firstName() {
     return faker.person.firstName();

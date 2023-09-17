@@ -1,7 +1,7 @@
-import { postFactory } from './post';
+import { taskFactory } from './task';
 import { userFactory } from './user';
 
 export const factories = {
   user: userFactory,
-  post: postFactory,
+  task: taskFactory,
 };

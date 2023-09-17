@@ -1,13 +1,13 @@
 import { faker } from '@faker-js/faker';
 import { Factory } from 'miragejs';
 
-import { PostModel } from '~/entities/Post/model';
+import { TaskModel } from '~/entities/Task/model';
 
-export const postFactory = Factory.extend<PostModel>({
+export const taskFactory = Factory.extend<TaskModel>({
   id(i) {
-    return i;
+    return i + 1;
   },
-  text() {
+  description() {
     return faker.lorem.paragraph(4);
   },
   createdAt() {
@@ -15,8 +15,8 @@ export const postFactory = Factory.extend<PostModel>({
   },
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  afterCreate(post, server) {
-    post.update({
+  afterCreate(task, server) {
+    task.update({
       user: server.create('user'),
     });
   },

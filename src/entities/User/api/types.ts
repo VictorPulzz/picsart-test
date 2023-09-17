@@ -6,3 +6,6 @@ export type GetUsersResponse = PaginationTypeResponse<UserModel>;
 
 export type GetAllUsersRequest = void;
 export type GetAllUsersResponse = UserModel[];
+
+export type CreateUserRequest = UserModel;
+export type CreateUserResponse = void;

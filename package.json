@@ -1,7 +1,7 @@
 {
-  "name": "picsart-test",
+  "name": "react",
   "version": "1.0.0",
-  "description": "My test application for Picsart",
+  "description": "",
   "main": "index.js",
   "author": "Victor Razdorov",
   "license": "ISC",
@@ -14,7 +14,6 @@
     "lint": "eslint --quiet src/**/*.{ts,tsx}",
     "lint:fix": "yarn lint --fix",
     "prettier:fix": "yarn prettier --write",
-    "style:fix": "yarn style --fix",
     "check-types": "tsc -p tsconfig.json",
     "prepare": "husky install"
   },
@@ -25,12 +24,16 @@
     "@reduxjs/toolkit": "1.9.5",
     "@tanstack/react-table": "^8.9.9",
     "@tanstack/table-core": "^8.9.9",
+    "@types/lodash.debounce": "^4.0.7",
+    "@types/lodash.orderby": "^4.6.7",
     "@vitejs/plugin-react": "^4.0.3",
     "axios": "1.4.0",
     "clsx": "1.2.1",
     "dayjs": "^1.11.9",
     "framer-motion": "^10.16.4",
     "immer": "10.0.2",
+    "lodash.debounce": "^4.0.8",
+    "lodash.orderby": "^4.6.0",
     "miragejs": "^0.1.47",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -99,9 +102,6 @@
     ],
     "*.{scss,json,css,pcss,js}": [
       "prettier --write"
-    ],
-    "*.{scss,css}": [
-      "yarn style:fix"
     ]
   }
 }

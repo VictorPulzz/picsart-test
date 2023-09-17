@@ -1,0 +1,14 @@
+// stylelint-disable
+:global {
+  .ReactModal__Overlay {
+    z-index: 999999 !important;
+  }
+}
+
+.backdrop {
+  @apply fixed bg-black/80 inset-0 flex justify-center items-center bg-opacity-40 z-[9999991];
+}
+
+.container {
+  @apply relative bg-white dark:bg-gray-dark rounded-md z-[9999992];
+}

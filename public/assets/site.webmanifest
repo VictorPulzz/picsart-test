@@ -1,6 +1,6 @@
 {
-    "name": "Appello",
-    "short_name": "Appello",
+    "name": "Test Picsart App",
+    "short_name": "Test Picsart App",
     "icons": [
         {
             "src": "/assets/android-chrome-192x192.png",

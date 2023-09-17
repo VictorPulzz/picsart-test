@@ -39,8 +39,8 @@ export const Pagination: FC<PaginationProps> = ({
     }
 
     const leftSiblingIndex = Math.max(currentPage - SIBLING_COUNT, 1);
-
     const rightSiblingIndex = Math.min(currentPage + SIBLING_COUNT, totalPageCount);
+
     const shouldShowLeftDots = leftSiblingIndex > 2;
     const shouldShowRightDots = rightSiblingIndex < totalPageCount - 2;
 
@@ -50,7 +50,6 @@ export const Pagination: FC<PaginationProps> = ({
     if (!shouldShowLeftDots && shouldShowRightDots) {
       const leftItemCount = 3 + 2 * SIBLING_COUNT;
       const leftRange = range(1, leftItemCount);
-
       return [...leftRange, DOTS, totalPageCount];
     }
 
@@ -84,7 +83,7 @@ export const Pagination: FC<PaginationProps> = ({
             }
           : {})}
       >
-        <Icon name="arrowBack" width={10} height={10} />
+        <Icon name="arrowBack" width={10} height={10} className="fill-transparent" />
       </div>
 
       {paginationRange.map(pageNumber => {
@@ -122,7 +121,7 @@ export const Pagination: FC<PaginationProps> = ({
             }
           : {})}
       >
-        <Icon name="arrowBack" width={10} height={10} className="rotate-180" />
+        <Icon name="arrowBack" width={10} height={10} className="fill-transparent rotate-180" />
       </div>
     </Box>
   );

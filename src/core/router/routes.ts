@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Home } from '~/pages/Home';
+import { Users } from '~/pages/Users';
 
 export enum RoutesPathList {
   HOME = '/',
@@ -23,7 +24,7 @@ export const ROUTES: RoutesList[] = [
   },
   {
     path: RoutesPathList.USERS,
-    component: Home,
+    component: Users,
     header: {
       title: 'Users',
     },

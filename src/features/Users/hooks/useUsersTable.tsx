@@ -62,11 +62,10 @@ export const useUsersTable: UseAllCasesTableFn = ({ page, limit, params }) => {
           },
           cell: info => {
             if (info.cell.column.id === UserTableHeaderCellEnum.AVATAR) {
-              const { avatar } = info.getValue() as UsersTableModel;
-              return <Avatar avatar={avatar} size={32} className="mr-2.5" />;
+              return <Avatar avatar={info.getValue() as string} size={32} className="mr-2.5" />;
             }
             if (info.cell.column.id === UserTableHeaderCellEnum.DOB) {
-              return info.getValue() ? dayjs(info.getValue() as string).format() : '-';
+              return info.getValue() ? dayjs(info.getValue() as string).format('LLL') : '-';
             }
             return <Typography variant="p1">{info.getValue() as string}</Typography>;
           },

@@ -1,0 +1,105 @@
+%input {
+  @apply relative
+    w-full
+    border
+    border-solid
+    border-gray
+    rounded-lg
+    bg-white
+    flex
+    flex-row
+    items-center
+    cursor-pointer
+    transition-all
+    dark:bg-gray-dark/10
+    dark:border-gray-dark
+    dark:text-white;
+
+  input,
+  textarea {
+    @apply h-full flex-1 placeholder-gray cursor-pointer;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      background-color: transparent !important;
+      box-shadow: 0 0 0 1000px rgb(var(--white)) inset !important;
+    }
+  }
+}
+
+.dark {
+  input,
+  textarea {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      outline: none;
+      background-color: transparent !important;
+      box-shadow: 0 0 0 1000px rgb(var(--gray-dark)) inset !important;
+    }
+  }
+}
+
+.input {
+  @apply text-sm font-normal leading-[1.125rem] tracking-text w-full;
+
+  &_default {
+    @extend %input;
+    @apply py-[1.063rem] px-4;
+  }
+
+  &_big {
+    @extend %input;
+    @apply h-[4rem] py-3 px-3;
+  }
+
+  &_small {
+    @extend %input;
+    @apply h-[2.625rem] px-2.5;
+  }
+
+  &_multiline {
+    @extend %input;
+    @apply h-32 py-[0.875rem] px-4;
+  }
+
+  &_counter {
+    @apply absolute right-0 -bottom-[2px] text-gray bg-white dark:bg-gray-dark;
+  }
+
+  &_disabled,
+  &_clickable {
+    @apply cursor-default;
+
+    input,
+    textarea {
+      @apply cursor-default;
+    }
+  }
+
+  &_disabled {
+    @apply opacity-60;
+  }
+}
+
+.label {
+  @apply text-left text-gray;
+}
+
+.outside_label {
+  @apply text-left mb-2.5 text-primary dark:text-white;
+}
+
+.textarea {
+  @apply text-sm font-normal tracking-text leading-5;
+
+  resize: none;
+}

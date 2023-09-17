@@ -3,6 +3,7 @@ export * from './Container';
 export * from './Empty';
 export * from './Icon';
 export * from './IconInArea';
+export * from './Input';
 export * from './Pagination';
 export * from './Sidebar';
 export * from './Skeleton';
