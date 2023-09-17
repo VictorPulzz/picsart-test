@@ -24,8 +24,9 @@ export function registerUserRoutes(context: Server) {
     const user = schema.create('user', attrs);
     return new Response(200, {}, user);
   });
-  context.get(`/users/all`, (schema: AppSchema) => {
-    const users = schema.all('user');
-    return new Response(200, {}, users);
+  context.get(`/users/:id`, (schema: AppSchema, request) => {
+    const id = request.params.id;
+    const user = schema.find('user', id);
+    return new Response(200, {}, { user });
   });
 }

@@ -11,6 +11,7 @@ export const useNavigation = () => {
   const location = useLocation();
   const params = useSearchParams();
   const routes = ROUTES;
+  const routesSidebar = ROUTES.filter(item => item.inMenu);
 
   const isSameRoute = useCallback(
     (routeName: string) => {
@@ -31,6 +32,7 @@ export const useNavigation = () => {
   return {
     location,
     routes,
+    routesSidebar,
     isSameRoute,
     currentRoute,
     navigate,

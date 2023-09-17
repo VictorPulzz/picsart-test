@@ -8,12 +8,12 @@ import { useNavigation } from '~/shared/hooks/useNavigation';
 import styles from './Sidebar.module.scss';
 
 export const Sidebar: FC = () => {
-  const { routes, isSameRoute } = useNavigation();
+  const { routesSidebar, isSameRoute } = useNavigation();
 
   return (
     <nav className={styles.sidebar}>
       <ul className="w-full">
-        {routes.map(({ path, header }, index) => (
+        {routesSidebar.map(({ path, header }, index) => (
           <li className="flex w-full" key={index}>
             <Link
               to={path}

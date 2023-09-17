@@ -7,10 +7,12 @@ import { useUsersTable } from '~/features/Users';
 import { Box, Input, Table, Typography } from '~/shared/components';
 import { Button } from '~/shared/components/Button';
 import { UserModal } from '~/shared/components/Modals';
+import { useNavigation } from '~/shared/hooks';
 
 const LIMIT = 10;
 
 export const Users: FC = () => {
+  const { navigate } = useNavigation();
   const [input, setInput] = useState('');
   const [visible, setVisible] = useState(false);
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -58,7 +60,7 @@ export const Users: FC = () => {
 
       <Table<UsersTableModel>
         {...{ columns, data, isLoading, sorting, setSorting }}
-        onClickRow={row => console.log(row.original.id)}
+        onClickRow={row => navigate(`/users/${row.original.id}`)}
         currentPage={pageIndex}
         limit={LIMIT}
         count={resultData?.count}

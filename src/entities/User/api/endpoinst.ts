@@ -6,6 +6,8 @@ import {
   CreateUserResponse,
   GetAllUsersRequest,
   GetAllUsersResponse,
+  GetUserRequest,
+  GetUserResponse,
   GetUsersRequest,
   GetUsersResponse,
 } from './types';
@@ -25,6 +27,11 @@ const userApi = rtkQuery.injectEndpoints({
         url: `users/all`,
       }),
     }),
+    getUser: builder.query<GetUserResponse, GetUserRequest>({
+      query: ({ id }) => ({
+        url: `users/${id}`,
+      }),
+    }),
     createUser: builder.mutation<CreateUserResponse, CreateUserRequest>({
       query: body => ({
         url: `users`,
@@ -36,4 +43,4 @@ const userApi = rtkQuery.injectEndpoints({
   }),
 });
 
-export const { useGetUsersQuery, useCreateUserMutation } = userApi;
+export const { useGetUsersQuery, useCreateUserMutation, useGetUserQuery } = userApi;
